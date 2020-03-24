@@ -12,8 +12,8 @@ services:
   aws: 
     image: organs/awscli
     environment:
-      AWS_ACCESS_KEY_ID: "AKIAY2SQCHFSWZJYQDHL"
-      AWS_SECRET_KEY: "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"
+      AWS_ACCESS_KEY_ID: "${AWS_ACCESS_KEY_ID}"
+      AWS_SECRET_KEY: "${AWS_SECRET_KEY}"
       AWS_REGION: "eu-west-1"
       AWS_DEFAULT_REGION: "eu-west-1"
     volumes:
@@ -24,8 +24,8 @@ services:
       dockerfile: terraform.dockerfile
       context: .
     environment:
-      AWS_ACCESS_KEY_ID: "AKIAY2SQCHFSWZJYQDHL"
-      AWS_SECRET_KEY: "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"
+      AWS_ACCESS_KEY_ID: "${AWS_ACCESS_KEY_ID}"
+      AWS_SECRET_KEY: "${AWS_SECRET_KEY}"
       AWS_REGION: "eu-west-1"
       AWS_DEFAULT_REGION: "eu-west-1"
     volumes:
